@@ -1,0 +1,15 @@
+In Collection frame work there is a main class called List and under this class we have three main framworks which is
+
+
+
+List                                             Set                                             Queue
+ |                                                |                                                |
+ Linked List                                   HashSet                                          ArrayDeque
+ |                                                |                                                 |
+ ArrayList                                    LinkedHashSet                                     Priority Queue
+ |                                                |                                                 |
+ Stack                                          TreeSet                                         linkedList
+ |
+ Vector
+
+ Above is the Tree of list collection framwork then we have to more Collection framwork which is Map & Itrator.

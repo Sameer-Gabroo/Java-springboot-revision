@@ -1,8 +1,7 @@
 package collection_framwork.List;
-
 import java.util.*;
 
-public class Learn_ArrayList {
+public class Learn_LinkedList {
 
     static void main(String[] args) {
 
@@ -19,10 +18,11 @@ public class Learn_ArrayList {
 //       Advantage: If you want to add someone at spot #2, you just break the hand-holding between #1 and #2 and insert the new person. No one else has to move.
 
 
-       //This is how we create a object in ArrayList and make sure we have to import the pakage java.util.
+
+       //This is how we create a object in LinkedList and make sure we have to import the pakage java.util.
        // Array List in used to crate the dynamic array list we can delete remove and change the value in this list just we don't have to declear the length of array it will adjust by itself
 
-       ArrayList<Integer> num = new ArrayList<>();
+       List<Integer> num = new LinkedList<>();
 
        //this is hoe we add the value in the Arraylist my add method
        num.add(30);

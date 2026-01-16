@@ -1,0 +1,39 @@
+import java.util.ArrayList;
+
+public class Main {
+    public static void main(String[] args) {
+        ArrayList list = new ArrayList();
+        list.add("Hello");
+        list.add(123);       we are trying to save intergers and string in a same array
+        list.add(3.14);
+
+        String str = (String) list.get(0);
+        String str1 = (String) list.get(1);
+
+    }
+}
+
+Exception in thread "main" java.lang.ClassCastException: class java.lang.Integer cannot be cast to class java.lang.String (java.lang.Integer and java.lang.String are in module java.base of loader 'bootstrap')
+ at com.engineeringdigest.corejava.Main.main(Main.java:13)
+
+ Above code has 3 major issues
+
+ No Type safety
+ Manual casting
+ No Compile Time checking
+
+
+ These issues can be solved by Generics
+
+ import java.util.ArrayList;
+
+ public class Main {
+     public static void main(String[] args) {
+         ArrayList<String> list = new ArrayList<>();
+         list.add("Hello");
+         list.add("World");
+         String s = list.get(0);
+         String s1 = list.get(1);
+
+     }
+ }

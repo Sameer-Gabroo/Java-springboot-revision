@@ -1,7 +1,9 @@
 package Core_Java.AdvanceTopic;
 
+import java.util.function.Consumer;
 import java.util.function.Function;
 import java.util.function.Predicate;
+import java.util.function.Supplier;
 
 public class Funtional_Interfaces {
 
@@ -10,23 +12,41 @@ public class Funtional_Interfaces {
     // this is just a simple funtional interface method which is generic to we also have to provide the type of variable
     Predicate <String>predicate = x -> x.isEmpty();
 
-
-    static void main(String[] args) {
-        Funtional_Interfaces funtionalInterfaces = new Funtional_Interfaces();
-        System.out.println(funtionalInterfaces.predicate.test("")); // this will retun true
-    }
-
     //we are learning this becasue this will help us to understand stream API
 
 
-                            //Function
-
-    // Funtion is a funtional interface means Funtion is a method in a interface which is fuctional
+                                  //Function
+    // Funtion is a funtional interface means  Funtion is a method in a interface which is fuctional
     // Funtion method looks like this "R apply(T t);" which take 2 inputs an return the result
-
     Function <Integer, Integer>function = t -> t*2;
 
 
+                                  //Consumer
+    Consumer <String>consumer = T -> System.out.println("hello world ");
+
+                                 //Supplier
+    Supplier <Boolean> supplier = ()-> true;
+
+    static void main(String[] args) {
+                                  //Pridicate result
+        Funtional_Interfaces funtionalInterfaces = new Funtional_Interfaces();
+        System.out.println(funtionalInterfaces.predicate.test("")); // this will retun true
+                                 //Funtion result
+        System.out.println(funtionalInterfaces.function.apply(3));
+                                // Consumer
+        funtionalInterfaces.consumer.accept("sameer ");
+                                   //supplier
+        System.out.println(funtionalInterfaces.supplier.get());
+
+        
+    }
+
+
+//
+//    Predicate → test
+//    Function  → transform
+//    Supplier  → provide
+//    Consumer  → consume
 
 
 }
